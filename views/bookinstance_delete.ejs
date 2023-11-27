@@ -1,0 +1,15 @@
+<h1><%= title + ': ID:'+ bookinstance._id %></h1>
+
+<p>Do you really want to delete this copy?</p>
+<form action="" method="post">
+  <div class="form-group">
+    <input
+      type="hidden"
+      name="bookinstanceid"
+      id="bookinstanceid"
+      class="form-control"
+      value="<%= bookinstance._id %>"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Delete</button>
+</form>

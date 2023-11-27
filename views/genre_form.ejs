@@ -1,0 +1,25 @@
+<h1><%= title %></h1>
+
+<form action="" method="post">
+  <div class="form-group">
+    <label for="name">Genre:</label>
+    <input
+      type="text"
+      id="name"
+      class="form-control"
+      placeholder="Fantasy, Poetry etc."
+      name="name"
+      required="true"
+      value="<%= genre === undefined ? '' : genre.name %>"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+<% if (errors) { %>
+<ul>
+  <% errors.forEach(err => { %>
+  <li><%= err.msg %></li>
+  <% }) %>
+</ul>
+<% } %>
